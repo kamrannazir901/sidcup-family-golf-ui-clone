@@ -103,7 +103,9 @@ nav .right button,
 }
 nav .right button:hover,
 .mobilebuttonDiv button:hover {
-  color: white;
+  color: black;
+  border: 2px solid #000;
+
   background-color: var(--green);
 }
 
@@ -118,12 +120,20 @@ nav img {
 }
 
 .menubtn {
-  border: none !important;
   padding: 0.5rem !important;
 }
 .menubtn i {
   font-size: 1.6rem;
 }
+.menubtn:hover,
+.mobilebtn:hover {
+  border: 2px solid black;
+}
+
+.menubtn:hover i {
+  color: #000;
+}
+
 .mobilebuttonDiv {
   display: none;
   z-index: 9999;
@@ -210,6 +220,7 @@ video {
 main {
   position: relative;
   z-index: var(--z-index-main);
+  overflow: hidden;
 }
 
 .section2 .arrowdown {
@@ -433,6 +444,16 @@ main {
   overflow: hidden;
   transition: all 0.2s ease;
   transform-style: preserve-3d;
+  position: relative;
+}
+
+.card > h2 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: clamp(28px, 2vw, 54px);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 #card1 {
@@ -1138,7 +1159,9 @@ img#quoterighticon {
   width: fit-content;
 }
 .timerimagessection button:hover {
-  color: white;
+  color: black;
+  border: 2px solid #000;
+
   background-color: var(--green);
 }
 
