@@ -2,15 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <title>SIidcup Family Golf</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+
+    <link rel="icon" href="/images/logo-white.svg" type="image/svg+xml" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- onload notice div -->
+    <div class="noticedivparent">
+      <div class="noticediv">
+        <div class="icon">X</div>
+        <div>
+          <div class="content">
+            <h2>Coustomer Notice</h2>
+            <p>
+              Under 18’s must be accompanied by an adult at all times on the
+              Driving Range
+            </p>
+          </div>
+          <div class="imageright">
+            <img src="/images/greendiv1.svg" alt="" />
+          </div>
+          <div class="imageleft">
+            <img src="/images/greendiv1.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="cursor"></div>
     <div id="cursor-box"></div>
     <section class="section1">
@@ -42,14 +75,14 @@
         <a href="#">Events</a>
       </div>
 
-      <video src="/Videos/golfvideo.mp4" autoplay loop muted>
+      <video src="Videos/golfvideo.mp4" autoplay loop muted>
         Not Supported
       </video>
     </section>
 
     <main>
       <section class="section2">
-        <h1>Eat. Drink. Play.</h1>
+        <h1 data-text="Eat. Drink. Play.">Eat. Drink. Play.</h1>
         <h2>Welcome to Sidcup Family Golf!</h2>
         <p>
           Sidcup Family Golf is a Toptracer driving range and crazy golf venue
@@ -170,6 +203,86 @@
         </div>
       </section>
 
+      <!-- timer images  -->
+
+      <section class="timerimagessection">
+        <div class="flex-container">
+          <div class="sliderleft">
+            <img src="images/dots-footer.svg" class="stickimg" alt="" />
+            <div class="mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/image1.avif" alt="Image 1" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/image2.avif" alt="Image 1" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/image3.avif" alt="Image 1" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="sliderright">
+            <h2>Food And Drink</h2>
+            <p>
+              Whether you’re getting ready to play, just finishing your practice
+              session or feeling peckish on the range, we have a variety of food
+              and drink options bought directly to your table or bay.
+            </p>
+            <p>
+              We make sure that we cater for everyone, offering a range of vegan
+              and gluten free options.
+            </p>
+            <button>Coffee shop</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- slider -->
+
+      <section class="slidersection">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div><img src="images/card1.webp" alt="" /></div>
+            </div>
+            <div class="swiper-slide">
+              <div><img src="images/card2.avif" alt="" /></div>
+            </div>
+            <div class="swiper-slide">
+              <div><img src="images/card3.avif" alt="" /></div>
+            </div>
+            <div class="swiper-slide">
+              <div><img src="images/card1.webp" alt="" /></div>
+            </div>
+            <div class="swiper-slide">
+              <div><img src="images/card2.avif" alt="" /></div>
+            </div>
+            <div class="swiper-slide">
+              <div><img src="images/card3.avif" alt="" /></div>
+            </div>
+            <div class="swiper-slide">
+              <div><img src="images/card1.webp" alt="" /></div>
+            </div>
+            <div class="swiper-slide">
+              <div><img src="images/card2.avif" alt="" /></div>
+            </div>
+            <div class="swiper-slide">
+              <div><img src="images/card3.avif" alt="" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="title">
+          <i class="ri-instagram-line"></i>
+
+          <h2>Follow Us On Instagram</h2>
+        </div>
+      </section>
+
       <section class="section4">
         <img id="quotelefticon" src="images/quote-left.svg" alt="" />
         <p id="quotepara"></p>
@@ -198,7 +311,7 @@
         <img id="footerimg" src="images/dots-footer.svg" alt="" />
         <div class="footer">
           <div class="col">
-            <img src="/images/logo-white.svg" alt="" />
+            <img src="images/logo-white.svg" alt="" />
             <div class="icons">
               <i class="ri-facebook-fill"></i>
               <i class="ri-instagram-line"></i>
@@ -250,6 +363,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>

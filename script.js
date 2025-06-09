@@ -106,7 +106,11 @@ function mouseCursor() {
   // hover effect
 
   const Allanchors = document.querySelectorAll("nav a");
-  Allanchors.forEach((a) => {
+  const allSliders = document.querySelectorAll(".swiper-slide");
+
+  const interactiveElements = [...Allanchors, ...allSliders];
+
+  interactiveElements.forEach((a) => {
     a.addEventListener("mouseenter", () => {
       gsap.to("#cursor", {
         scale: 2.5,
@@ -161,11 +165,32 @@ function quotessection() {
   }, 4000);
 }
 
+function noticeDivOnLoad() {
+  const noticedivParent = document.querySelector(".noticedivparent");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      noticedivParent.style.display = "grid";
+      noticedivParent.style.zIndex = "1000";
+    }, 2000);
+  });
+
+  noticedivParent.addEventListener("click", (e) => {
+    if (
+      e.target.classList.contains("noticedivparent") ||
+      e.target.classList.contains("icon")
+    ) {
+      noticedivParent.style.display = "none";
+    }
+  });
+}
+
 mobilebtnShow();
 openMobileMenu();
 ScrollEffect();
 mouseCursor();
 quotessection();
+// noticeDivOnLoad();
 
 // about
 
@@ -236,5 +261,36 @@ gsap.from(".section5 h2", {
     start: "top 100%",
     end: "top 90%",
     scrub: 1,
+  },
+});
+
+const swiper = new Swiper(".swiper", {
+  direction: "horizontal",
+  loop: true,
+  freeMode: true,
+  slidesPerView: "auto",
+  spaceBetween: 20,
+
+  breakpoints: {
+    1024: {
+      spaceBetween: 70,
+    },
+  },
+  speed: 4000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+});
+
+const myswiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  // loop: true,
+  autoplay: {
+    delay: 2000,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
 });
