@@ -445,6 +445,7 @@ main {
   transition: all 0.2s ease;
   transform-style: preserve-3d;
   position: relative;
+  cursor: pointer;
 }
 
 .card > h2 {
@@ -481,6 +482,11 @@ main {
 .card:hover .overlay {
   opacity: 1;
 }
+
+.card:hover > h2 {
+  opacity: 0;
+}
+
 .card:hover {
   transform: rotate3d(-0.25, 0.4, 0, 10deg);
 }
@@ -1040,6 +1046,7 @@ img#quoterighticon {
 .timerimagessection {
   margin: auto;
   width: 90%;
+  margin-top: 100px;
 }
 
 .timerimagessection .flex-container {
@@ -1063,7 +1070,7 @@ img#quoterighticon {
   aspect-ratio: 4 / 3;
   width: 100%;
   height: 100%;
-  max-height: 550px;
+  max-height: 650px;
 }
 
 .mySwiper .swiper-slide img {
@@ -1166,6 +1173,9 @@ img#quoterighticon {
 }
 
 @media screen and (max-width: 1320px) {
+  .timerimagessection {
+    margin-top: 40px;
+  }
   .timerimagessection .flex-container {
     display: flex;
     align-items: center;
